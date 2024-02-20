@@ -7,7 +7,7 @@
 // 4 - Créer une fonction d'affichage, et paramétrer l'affichage des cartes de chaque pays grace à la méthode MAP
 
 // 5 - Récupérer ce qui est tapé dans l'input et filtrer (avant le map) les données
-// coutry.name.includes(inputSearch.value);
+// coutry.translations.fra.includes(inputSearch.value);
 
 // 6 - Avec la méthode Slice gérer le nombre de pays affichés (inputRange.value)
 
@@ -35,7 +35,9 @@ inputRange.addEventListener("input", countriesDisplay); // Écouteur d'événeme
 
 async function countriesDisplay() {
   const filteredCountries = countries.filter((country) =>
-    country.name.common.toLowerCase().includes(inputSearch.value.toLowerCase())
+    country.translations.fra.common
+      .toLowerCase()
+      .includes(inputSearch.value.toLowerCase())
   );
 
   const numCountries = parseInt(inputRange.value); // Nombre de pays à afficher
@@ -47,11 +49,13 @@ async function countriesDisplay() {
     .map(
       (country) =>
         `<div class="country-card">
-            <img class="country-flag" src="${country.flags.svg}" alt="Drapeau de ${country.name.common}">
+            <img class="country-flag" src="${
+              country.flags.svg
+            }" alt="Drapeau de ${country.translations.fra.common}">
             <div class="country-info">
               <h2>${country.translations.fra.common}</h2>
               <p><strong>Capitale:</strong> ${country.capital}</p>
-              <p><strong>Population:</strong> ${country.population}</p>
+              <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
             </div>
          </div>`
     )
@@ -72,6 +76,8 @@ document.getElementById("maxToMin").addEventListener("click", () => {
 });
 
 document.getElementById("alpha").addEventListener("click", () => {
-  countries.sort((a, b) => a.name.common.localeCompare(b.name.common));
+  countries.sort((a, b) =>
+    a.translations.fra.common.localeCompare(b.translations.fra.common)
+  );
   countriesDisplay();
 });
