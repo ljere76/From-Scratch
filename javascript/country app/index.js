@@ -49,7 +49,7 @@ async function countriesDisplay() {
         `<div class="country-card">
             <img class="country-flag" src="${country.flags.svg}" alt="Drapeau de ${country.name.common}">
             <div class="country-info">
-              <h2>${country.name.common}</h2>
+              <h2>${country.translations.fra.common}</h2>
               <p><strong>Capitale:</strong> ${country.capital}</p>
               <p><strong>Population:</strong> ${country.population}</p>
             </div>
