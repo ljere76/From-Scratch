@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "inter";
+  src: url(../fonts/Inter/Inter-VariableFont_slnt\wght.ttf);
+  font-family: "merryweather";
+  src: url(../fonts/Merriweather/Merriweather-VariableFont_wght.ttf);
+}
+
+$font1: inter-bold;
+$font2: merryweather;
+$black1: rgb(20, 20, 20);
+$white1: rgb(245, 245, 245);
+$grey1: rgb(210, 210, 210);
+$grey2: rgb(235, 235, 235);
+$grey3: rgb(120, 120, 120);
+
+@mixin title {
+  font-family: $font1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+a,
+a:visited {
+  color: $white1;
+}

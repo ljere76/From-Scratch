@@ -1,0 +1,46 @@
+.main {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background: $white;
+
+  @media screen and (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-text {
+    margin: 15px;
+    padding: 30px 15px;
+    border: 1px dashed $color1;
+
+    h2 {
+      @extend %h2;
+    }
+
+    h3 {
+      @extend %h3Black;
+      margin-top: -12px;
+    }
+
+    img {
+      margin: 26px;
+    }
+    img:nth-of-type(2) {
+      height: 70px;
+      border-radius: 150px;
+      margin-bottom: 8px;
+    }
+    h4 {
+      @extend %h4;
+    }
+    h5 {
+      @extend %h5;
+    }
+  }
+  .intro-pic {
+    background: url(../img/store-01.jpg) center/cover;
+
+    @media screen and (max-width: 680px) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s linear;
+  background: rgb(235, 244, 242);
+}
+
+h1 {
+  margin: 14px 0 20px;
+  background: #161615;
+  color: #accbee;
+  padding: 10px 20px;
+  border-radius: 150px;
+  border: 2px solid #accbee;
+  transition: 0.2s;
+  cursor: pointer;
+}

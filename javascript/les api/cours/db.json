@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "id": "780f",
+      "name": "John",
+      "age": 30,
+      "city": "New York"
+    },
+    {
+      "id": "0829",
+      "name": "John",
+      "age": 30,
+      "city": "New York"
+    }
+  ]
+}
