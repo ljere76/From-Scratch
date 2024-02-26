@@ -6,7 +6,7 @@ img.src = "./media/flappy-bird-set.png";
 
 let gamePlaying = false;
 const gravity = 0.5;
-const speed = 4.2;
+const speed = 3.2;
 const size = [51, 36];
 const jump = -11.5;
 const cTenth = canvas.width / 10;
@@ -139,7 +139,7 @@ const render = () => {
         [
           pipe[0] <= cTenth + size[0],
           pipe[0] + pipeWidth >= cTenth,
-          pipe[1] > flyHeight || pipe[1 + pipeGap] < flyHeight + size[1],
+          pipe[1] > flyHeight || pipe[1] + pipeGap < flyHeight + size[1],
         ].every((v) => v)
       ) {
         gamePlaying = false;
