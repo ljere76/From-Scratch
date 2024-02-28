@@ -1,0 +1,45 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 0 20px;
+  margin-top: 100px;
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  padding: 5px;
+  border: 2px solid #fa2667;
+  font-family: Cambria, Georgia, serif;
+  font-weight: 100;
+  border-radius: 5px;
+  align-items: stretch;
+}
+
+.card h2 {
+  min-height: 3vw;
+  max-height: 3vw;
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+.card img {
+  min-width: 90%;
+  height: auto;
+}
+.card h3 {
+  margin: 5px 0;
+}
+
+.card li {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 8;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  font-size: 1rem;
+  margin: 0 5px;
+}
