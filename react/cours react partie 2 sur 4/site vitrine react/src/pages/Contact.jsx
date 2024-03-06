@@ -1,16 +1,34 @@
-import Navigation from "../components/Navigation";
-import Mouse from "../components/Mouse";
-import Logo from "../components/Logo";
-import Buttons from "../components/Buttons";
 import ContactForm from "../components/ContactForm";
+import Logo from "../components/Logo";
+import Mouse from "../components/Mouse";
+import Navigation from "../components/Navigation";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import SocialNetwork from "../components/SocialNetwork";
+import Buttons from "../components/Buttons";
+import { motion } from "framer-motion";
 
 const Contact = () => {
+  const pageTransition = {
+    in: {
+      opacity: 1,
+      x: 0,
+    },
+    out: {
+      opacity: 0,
+      x: 200,
+    },
+  };
   return (
     <main>
       <Mouse />
-      <div className="contact">
+      <motion.div
+        initial="out"
+        animate="in"
+        exit="out"
+        variants={pageTransition}
+        transition={{ duration: 0.5 }}
+        className="contact"
+      >
         <Navigation />
         <Logo />
         <ContactForm />
@@ -57,7 +75,7 @@ const Contact = () => {
           </div>
         </div>
         <Buttons left={"/projet-4"} />
-      </div>
+      </motion.div>
     </main>
   );
 };
